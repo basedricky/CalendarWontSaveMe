@@ -1,4 +1,4 @@
-# CalendarWontSaveMe Homework 5
+# CalendarWontSaveMe - Homework 5
 
 URL: https://basedricky.github.io/CalendarWontSaveMe/
 
@@ -9,7 +9,11 @@ GITHUB REPOSITYORY: https://github.com/basedricky/CalendarWontSaveMe
 ## Project Details
 ```
 
-I have created a simple daily planner page that will take user inputs into the text field and save them to Local storage. In addition, the time blocks will be dynamically colored based on if the time block is in the past, current, or future. After finishing this, It would have been much quicker, I think, to dynamically genearate the page via Javascript. I was jsut having some trouble getting the layout exactly how I'd like.
+I have created a simple daily planner page that will take user inputs into the text field and
+save them to Local storage. In addition, the time blocks will be dynamically colored based on if
+the time block is in the past, current, or future. After finishing this, It would have been much
+quicker, I think, to dynamically genearate the page via Javascript. I was jsut having some
+trouble getting the layout exactly how I'd like.
 
 
 ## User Story
