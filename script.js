@@ -1,7 +1,8 @@
 $(document).ready(function () {
-    document.getElementById("currentDay").innerHTML = now;
+
     // Setting the variable and using Moment to show the current date and time at the top of the page on page load.
     var now = moment().format('LLLL');
+    document.getElementById("currentDay").innerHTML = now;
 
     console.log(now);
 
@@ -16,30 +17,19 @@ $(document).ready(function () {
         localStorage.setItem(time, toDo);
     })
     //load any saved data from LocalStorage - do this for each reated.
-    $("#09 .description").val(localStorage.getItem("09"));
-    $("#10 .description").val(localStorage.getItem("10"));
-    $("#11 .description").val(localStorage.getItem("11"));
-    $("#12 .description").val(localStorage.getItem("12"));
-    $("#13 .description").val(localStorage.getItem("13"));
-    $("#14 .description").val(localStorage.getItem("14"));
-    $("#15 .description").val(localStorage.getItem("15"));
-    $("#16 .description").val(localStorage.getItem("16"));
-    $("#17 .description").val(localStorage.getItem("17"));
+    $("#09 .textarea").val(localStorage.getItem("09"));
+    $("#10 .textarea").val(localStorage.getItem("10"));
+    $("#11 .textarea").val(localStorage.getItem("11"));
+    $("#12 .textarea").val(localStorage.getItem("12"));
+    $("#13 .textarea").val(localStorage.getItem("13"));
+    $("#14 .textarea").val(localStorage.getItem("14"));
+    $("#15 .textarea").val(localStorage.getItem("15"));
+    $("#16 .textarea").val(localStorage.getItem("16"));
+    $("#17 .textarea").val(localStorage.getItem("17"));
 
-
-
-
-
-
-    //local storage you're gonna to set it as setItem(time, toDO)
-
-    //getItem
-
-    //save event button onClick requires setItem
-
-
+    // Timer to refresh the colors of the blocks based on current time
     var timer = setInterval(scheduler, 100000)
-
+    //Function to determine time and applicable color  for the respective text area
     function scheduler() {
 
         var timeRows = document.querySelectorAll('.time-row');
@@ -54,21 +44,19 @@ $(document).ready(function () {
 
             console.log(timeBlock)
 
-            //compare time here and add the class present, past, or future depending on case
-
-            //look up addClass and removeClass
+            // compare time here and add the class present, past, or future depending on case
 
             if (timeBlock < currentTime) {
                 $(this).removeClass("present future")
-                $(this).addClass("past 
+                $(this).addClass("past")
 
             } else if (timeBlock > currentTime) {
                 $(this).removeClass("past present")
-                $(this).addClass("future 
+                $(this).addClass("future")
 
             } else {
                 $(this).removeClass("future past")
-                $(this).addClass("present 
+                $(this).addClass("present")
             }
         })
 
